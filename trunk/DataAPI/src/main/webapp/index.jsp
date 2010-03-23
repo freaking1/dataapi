@@ -51,7 +51,7 @@
                                 <option value="supermarket">Supermarkets and Shooping centers</option>
                             </select></td></tr>
                     <tr><td><input type="submit" value="Go"></td></tr>
-                        </s:form>
+                 </s:form>
             </table>
         </center>
     </body>
