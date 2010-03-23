@@ -136,7 +136,7 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
                 System.out.println("Exception ririririri: ");
                 e.printStackTrace();
             }
-            session.put("result", rspJSON);
+            session.put("result", rspJSON.toString(4));
             session.put("type", type);
             return Action.SUCCESS;
         }
@@ -169,10 +169,6 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
 
     public HttpServletRequest getRequest() {
         return request;
-    }
-
-    public void setRequest(HttpServletRequest request) {
-        this.request = request;
     }
 
     public Map getSession() {
