@@ -11,7 +11,8 @@ import java.io.Serializable;
  * @author frank
  */
 public class YDetail implements Serializable {
-
+    
+    private int y_id;
     private String y_type;
     private String y_name;
     private String y_description;
@@ -150,4 +151,12 @@ public class YDetail implements Serializable {
         this.y_website = y_website;
     }
 
+    public int getY_id() {
+        return y_id;
+    }
+
+    public void setY_id(int y_id) {
+        this.y_id = y_id;
+    }
+    
 }
