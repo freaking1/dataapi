@@ -11,11 +11,10 @@
 <%@page import="net.sf.json.JSONObject" %>
 
 <%
-            JSONObject result = (JSONObject) session.getAttribute("result");
+            String result = (String) session.getAttribute("result");
             String type = (String) session.getAttribute("type");
             TypeTableInstance instance = new TypeTableInstance();
             String address = (String) instance.addresstable.get(type);
-
 %>
 <html>
     <head>
@@ -29,7 +28,7 @@
         <div id="content">
             <div id="title">JSON Responce:</div>
             <div id="json">
-                <pre><%out.write(result.toString(4));%></pre>
+                <pre><%out.write(result);%></pre>
             </div>
             <div id="wsdl"><a href="<%=address%>" target="_blank">Service WSDL Address</a></div>
         </div>
