@@ -38,7 +38,6 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
         List<YDetail> finalList = new ArrayList<YDetail>();
 
         if (type.equalsIgnoreCase("park")) {
-
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
                 list = ndsdao.PClient().findParksBySuburb(suburb);
@@ -48,7 +47,6 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
             if (list != null && list.size() != 0) {
                 finalList.addAll(list);
             }
-
         } else if (type.equalsIgnoreCase("aquarium")) {
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
@@ -60,39 +58,28 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
                 finalList.addAll(list);
             }
         } else if (type.equalsIgnoreCase("toilet")) {
-
-
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
-
                 try {
                     list = ntsdao.NClient().findToiletsBySuburb(suburb);
                 } catch (Throwable ex) {
                     ex.printStackTrace();
                     list = null;
                 }
-
             } else {
-
                 try {
                     list = ntsdao.NClient().findToiletsByPostcode(postcode);
                 } catch (Throwable ex) {
                     ex.printStackTrace();
                     list = null;
                 }
-
             }
             if (list != null && list.size() != 0) {
                 finalList.addAll(list);
             }
-
-
         } else if (type.equalsIgnoreCase("restaurant")) {
-            
-            System.out.println("I am here?");
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
-                System.out.println("I am here too?");
                 list = ndsdao.RClient().findRestaurantsBySuburb(suburb);
             } else {
                 list = ndsdao.RClient().findRestaurantsByPostcode(postcode);
@@ -100,9 +87,7 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
             if (list != null && list.size() != 0) {
                 finalList.addAll(list);
             }
-            
         } else if (type.equalsIgnoreCase("sport")) {
-
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
                 list = ndsdao.SPClient().finsSportsBySuburb(suburb);
@@ -112,9 +97,7 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
             if (list != null && list.size() != 0) {
                 finalList.addAll(list);
             }
-
         } else if (type.equalsIgnoreCase("supermarket")) {
-            
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
                 list = ndsdao.SMClient().findShoopingCentersBySuburb(suburb);
@@ -125,7 +108,6 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
                 finalList.addAll(list);
             }
         } else if (type.equalsIgnoreCase("museum")) {
-
             List<YDetail> list = null;
             if (postcode.equalsIgnoreCase("")) {
                 list = ndsdao.MClient().findMuseumsBySuburb(suburb);
@@ -137,13 +119,9 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
             }
         }
 
-
         if (finalList.size() == 0) {
-
             return Action.ERROR;
-
         } else {
-
             JSONArray results = new JSONArray();
             for (YDetail detail : finalList) {
                 //System.out.println("result: " + detail.getY_name());
@@ -157,9 +135,8 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
                 //what we shoud do???
                 System.out.println("Exception ririririri: ");
                 e.printStackTrace();
-
             }
-            session.put("result", rspJSON.toString(4));
+            session.put("result", rspJSON);
             session.put("type", type);
             return Action.SUCCESS;
         }
