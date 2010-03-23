@@ -1,0 +1,59 @@
+/* 
+    Document   : index
+    Created on : 14/03/2010, 9:55:07 PM
+    Author     : Zifei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*******************************************************
+    For Home Page
+*******************************************************/
+#content{
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    font-size: 12px;
+    border: 1px solid #555;
+    background-color: #eee;
+    padding: 10px;
+}
+
+/*logo*/
+#logo{
+    width: 320px;
+    height:42px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo img{
+    border: none;
+}
+
+#content table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content table th{
+    font-weight: 700;
+    text-align: right;
+}
+
+#content table td{
+    text-align: left;
+}
+
+#content table td input.text, #content table td select{
+    /*width: 100%;*/
+    width: 320px;
+}
+
+#content table td input.button{
+    padding: 3px;
+    font-weight: 700;
+}
+
