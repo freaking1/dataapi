@@ -159,7 +159,7 @@ public class TransormerAction extends ActionSupport implements ServletRequestAwa
                 e.printStackTrace();
 
             }
-            session.put("result", rspJSON.toString());
+            session.put("result", rspJSON.toString(4));
             session.put("type", type);
             return Action.SUCCESS;
         }

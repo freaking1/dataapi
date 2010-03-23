@@ -1,0 +1,136 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>About NSW Explorer Data API</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/about.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="logo"><a href="index.jsp" title="back to home"><img src="images/logo.png" alt="back to home"/></a></div>
+
+            <div class="title">About the App</div>
+            <div class="desc">
+                NSWeXplorer Data API is the data interface used by <a href="http://apps4nsw.uservoice.com/forums/35904-apps/suggestions/584295-nswexplorer?ref=title" title="NSWeXplorer">NSWeXplorer</a> for
+                <a href="http://www.information.nsw.gov.au/apps4nsw/about" title="Apps4NSW">Apps4NSW</a> contest.
+                The API has implemented by <a href="#" class="p_name">Mingyi Wang</a> and <a href="#" class="p_name">Zifei Gong</a>.
+                <p/>
+                The application integrates lots of datasets such as attractions, services and acitivities
+                information and having the ability to interact with further datasets. It converts the raw data from different data sources with different format
+                into a json responce which contains geographic information and other details for different kinds of facilities in NSW state.
+                It also exposes the interface by returning a WSDL file, which allows developers to further consume the service.
+                Our other application <a href="http://apps4nsw.uservoice.com/forums/35904-apps/suggestions/584295-nswexplorer?ref=title" title="NSWeXplorer">NSWeXplorer</a> can be seen as a prototype for the usage of this API.
+            </div>
+
+            <div class="title">Why the App</div>
+            <div class="desc">
+                The main purpose of having this API is to help developer who has great ideas to overcome
+                the problem of integrate different data sources, which usually the biggest time consuming phase when making a mashup.
+                By using the API, it should easier the development and allows people do consentrate on their ideas and business logic
+                instead of spending too much time on data layer.
+            </div>
+
+            <div class="title">About the Data</div>
+            <div class="desc">
+                <ul>
+                    <li>
+                        Australia Post’s postcode data (<a href="http://www.auspost.com.au/postcodes/" title="Postcode Data">link</a>)
+                    </li>
+                    <li>
+                        National Public Toilet Data (<a href="http://data.australia.gov.au/610" title="Toilet Data">link</a>)
+                    </li>
+                    <li>
+                        Reserves & Parks data fetched from local councils, such as
+                        <a href="http://www.randwick.nsw.gov.au/Places_for_people/Recreation_and_leisure/Beaches/index.aspx" title="Randwick">Randwick</a>, 
+                        <a href="http://www.bankstown.nsw.gov.au/Parks-and-Reserves/default.aspx" title="Bankstown">Bankstown</a>,
+                        <a href="http://www.campbelltown.nsw.gov.au/default.asp?iNavCatID=1044&iSubCatID=595" title="Campbelltown">Campbelltown</a>, etc
+                    </li>
+                    <li>
+                        Sport clubs and facilities data fetched from local councils, such as
+                        <a href="http://www.bankstown.nsw.gov.au/Local-Sports-Clubs/default.aspx" title="Bankstown">Bankstown</a>,
+                        <a href="http://www.parracity.nsw.gov.au/culture__and__leisure/sporting_facilities/tennis_courts" title="Parramatta">Parramatta</a>,
+                        <a href="http://www.campbelltown.nsw.gov.au/default.asp?iNavCatID=1044&iSubCatID=595" title="Campbelltown">Campbelltown</a>, etc
+                    </li>
+                    <li>
+                        Other data fetched from <a href="http://www.yellowpages.com.au/" title="Yellow Pages">Yellow Pages</a> under non-commercial use conditions.
+                        (<a href="http://www.yellowpages.com.au/pages/legal/copyright?intref=ypft" title="Yellow Page data license">Yellow pages’ data license</a>)
+                    </li>
+                </ul>
+                <p/>
+                Some data are fetched from web pages, we use them just for an demonstration purpose for our idea,
+                with more data provided by Australian Government, further attractions and activities can be added to the Application similarly.
+            </div>
+
+            <div class="title">About the technologies behind</div>
+            <div class="desc">
+                <b>Front-end:</b>
+                <ul>
+                    <li>jQuery (validated by <a href="http://www.jsure.org/check_javascript/" title="jSure">jSure</a>) and AJAX</li>
+                    <li>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                            <img style="border:0;width:88px;height:31px"
+                                 src="http://jigsaw.w3.org/css-validator/images/vcss"
+                                 alt="Valid CSS!" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://validator.w3.org/check?uri=referer">
+                            <img src="http://www.w3.org/Icons/valid-html401"
+                                 alt="Valid HTML 4.01 Transitional" height="31" width="88">
+                        </a>
+                    </li>
+                </ul>
+                <b>Back-end:</b>
+                <ul>
+                    <li>J2EE with Spring framework</li>
+                </ul>
+                <p/>
+                And we host our app on Cloud (Amazon EC2).
+            </div>
+
+            <div class="title">Other sources we used</div>
+            <div class="desc">
+                <ul>
+                    <li><a href="http://code.google.com/apis/maps/documentation/v3/" title="Google Maps API">Google Maps API v.3</a></li>
+                </ul>
+            </div>
+
+            <div class="title">The challenges we faced</div>
+            <div class="desc">
+                The biggest challange we faced was integrating different format of data.
+                The data are from Government departments, Local councils and web pages.
+                Most of them was in Excel documents and a few of them are XML files, the rest are displayed on web pages.
+                Those data are strctured for human reading but not for computer understanding.
+                So having a unified interface which has the ability to integrate them as well as further datasets is important and can save huge time in future development.
+                <p/>
+                Besides the data format, we also faced a problem which is there are actually a quite 
+                limited range of data available for implement our whole idea. Some data we found has not including NSW states as well.
+                Although there're quite a few statistic datasets which can be obtained from <a href="http://www.abs.gov.au/CDATAOnline" title="Australian Bureau of Statistics">Australian Bureau of Statistics</a>,
+                we are not satisfied just implement another mashup which only shows statistics like Crime rate, population, etc,
+                since there're already something like that, e.g. <a href="http://www.hackdays.com/knowwhereyoulive/" title="Know Where You Live">Know Where You Live</a>,
+                <a href="http://www.suburbantrends.com.au/" title="Suburban Trends">Suburban Trends</a>.
+                However NSWeXplorer is just a prototype for our idea, and all rights of the data belongs to its data provider.
+                <p/>
+                Finding a stable host is also a little bit time consuming. Since we are using J2EE technology, 
+                which we though more flexible and powerful then PHP, find a cheap and reliable hosting needs a little bit more work.
+                We are currently hosting our mashup on <a href="stax.net" title="Stax">Stax.net</a>, which is an Cloudy platform based on Amazon EC2.
+                Currently the site can not afford very high traffic or requests, and there are might be some server downtime for maintainance.
+            </div>
+
+            <div id="footer" class="clear">
+                <ul class="right">
+                    <li><a href="index.jsp" title="Back to Home">Home</a></li>
+                    <li>|</li>
+                    <li><a href="#" title="About Us">About</a></li>
+                    <li>|</li>
+                    <li><a href="http://apps4nsw.uservoice.com/forums/35904-apps/suggestions/587233-nsw-explorer-data-api?ref=title" title="Send feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
