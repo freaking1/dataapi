@@ -11,11 +11,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/result.css">
+        <title>No Records Found</title>
     </head>
     <body>
-        <center>
-            <h1>no records found</h1>
-        </center>
+        <div id="logo"><a href="index.jsp" title="Home"><img src="images/logo.png" alt="NSW Explorer Data API"/></a></div>
+        <div id="content">
+            <center><h3>no records found!</h3></center>
+        </div>
+        <div id="footer">
+            <ul class="right">
+                <li><a href="index.jsp" title="Back to Home">Home</a></li>
+                <li>|</li>
+                <li><a href="about.html" title="About Us">About</a></li>
+                <li>|</li>
+                <li><a href="http://apps4nsw.uservoice.com/forums/35904-apps/suggestions/587233-nsw-explorer-data-api?ref=title" title="Send feedback">Feedback</a></li>
+            </ul>
+        </div>
     </body>
 </html>

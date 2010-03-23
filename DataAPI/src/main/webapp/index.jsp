@@ -20,14 +20,13 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
-        <%--<script type="text/javascript" src="js/share.min.js"></script>--%>
         <script type="text/javascript" src="js/index.js"></script>
         <title>NSW Explorer Data API</title>
     </head>
     <body>
+        <div id="logo"><a href="index.jsp" title="Home"><img src="images/logo.png" alt="NSW Explorer Data API"/></a></div>
         <div id="content">
-            <div id="logo"><a href="index.jsp" title="Home"><img src="images/logo.png" alt="NSW Explorer Data API"/></a></div>
-                    <s:form action="TransormerAction" method="post">
+            <s:form action="TransormerAction" method="post">
                 <table cellspacing="10">
                     <tr><th>Suburb</th><td><input name="suburb" class="text" type="text" id="suburb"></td></tr>
                     <tr><th>Postcode</th><td><input name="postcode" class="text" type="text" id="postal"></td></tr>
@@ -45,7 +44,7 @@
                             </select>
                         </td>
                     </tr>
-                    <tr><th></th><td><input type="submit" value="Submit" class="button right" id="button"></td></tr>
+                    <tr><th></th><td><input type="button" value="Submit" class="button right" id="button"></td></tr>
                 </table>
             </s:form>
         </div>
