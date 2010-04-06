@@ -10,5 +10,5 @@ package au.nsw.data.wsdladdress;
  * @author frank
  */
 public class AquariumAddress implements Address{
-      public static String address = "http://datasource.mwan228.staxapps.net/AquariumDataService?wsdl";
+      public final static String address = "http://datasource.mwan228.staxapps.net/AquariumDataService?wsdl";
 }
