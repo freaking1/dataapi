@@ -10,5 +10,5 @@ package au.nsw.data.wsdladdress;
  * @author frank
  */
 public class ParkAddress implements Address{
-       public static String address = "http://datasource.mwan228.staxapps.net/ParkDataService?wsdl";
+       public final static String address = "http://datasource.mwan228.staxapps.net/ParkDataService?wsdl";
 }
