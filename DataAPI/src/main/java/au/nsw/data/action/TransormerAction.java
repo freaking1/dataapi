@@ -25,6 +25,7 @@ import org.apache.struts2.interceptor.SessionAware;
 public class TransormerAction extends ActionSupport implements ServletRequestAware, SessionAware {
 
     private HttpServletRequest request;
+    
     private Map session;
     private NSWDataSourceServiceDao ndsdao;
     private NSWToiletDataSourceServiceDao ntsdao;
